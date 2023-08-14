@@ -6,14 +6,14 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 21:06:45 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/14 21:08:43 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/08/15 00:08:51 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int main(void)
+int	main(void)
 {
-    ft_putstr("stop\n");
-    return (0);
+	ft_putstr("stop\n");
+	return (0);
 }
