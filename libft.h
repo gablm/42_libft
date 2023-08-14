@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/31 10:33:49 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/07/31 10:37:06 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/08/14 20:55:32 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/08/14 20:55:32 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
-#include <unistd.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <string.h>
 
 void	ft_putchar(char c);
 void	ft_swap(int *a, int *b);

@@ -6,9 +6,6 @@ OBJS=$(FILES:.c=.o)
 
 all: $(NAME)
 
-%.o: %.c
-	$(COMPILER) $(FLAGS) -c $*.c -o $*.o
-
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
@@ -20,10 +17,10 @@ fclean:
 
 re: fclean all
 
-dotest:
+dotest: cleantest
 	$(COMPILER) $(FLAGS) ztest.c -o test -L. -lft
 
 cleantest:
 	rm -fr test
 
-retest: cleantest dotest
+.PHONY: clean re fclean all 
