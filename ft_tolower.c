@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ztest.c                                            :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/14 21:06:45 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 00:35:25 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/08/15 00:19:56 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/08/15 00:20:18 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-#include <stdio.h>
-int	main(int argc, char **argv)
+int	ft_tolower(int c)
 {
-	(void)argc;
-	ft_putnbr(ft_atoi(argv[1]));
-	return (0);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }

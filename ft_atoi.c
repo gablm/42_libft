@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ztest.c                                            :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/14 21:06:45 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 00:35:25 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/08/15 00:24:18 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/08/15 00:27:45 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-#include <stdio.h>
-int	main(int argc, char **argv)
+int	ft_atoi(const char *nptr)
 {
-	(void)argc;
-	ft_putnbr(ft_atoi(argv[1]));
-	return (0);
+	int	i;
+	int	res;
+	int	signal;
+
+	i = 0;
+	res = 0;
+	signal = 1;
+	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
+		i++;
+	if (nptr[i] == '+' || nptr[i] == '-')
+	{
+		if (nptr[i] == '-')
+			signal *= -1;
+		i++;
+	}
+	while (nptr[i] >= '0' && nptr[i] <= '9')
+	{
+		res = res * 10 + nptr[i] - '0';
+		i++;
+	}
+	return (res * signal);
 }
