@@ -19,27 +19,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	while (s1[i] != '\0' && i < n)
 	{
-		if (s2[i] == '\0')
-			return (1);
-		if (s2[i] > s1[i])
-			return (-1);
-		if (s1[i] > s2[i])
-			return (1);
+		if (s2[i] == '\0' || s2[i] != s1[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
 	if (s2[i] != '\0' && i != n)
-		return (-1);
+		return (s1[i] - s2[i]);
 	return (0);
 }
-
-/*#include <string.h>
-#include <stdio.h>
-int main()
-{
-	char *a = "39JJ09ARSD";
-	char *b = "MAndo20fm3";
-	int i = 5;
-	int c = strncmp(a, b, i);
-	int d = ft_strncmp(a, b, i);
-	printf("%d\n%d\n", c, d);
-}*/
