@@ -6,7 +6,7 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 21:06:45 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 00:08:51 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/08/15 00:19:09 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	main(void)
 {
-	ft_putstr("stop\n");
+	ft_putchar('0' + ft_strcmp("bananb", "banana"));
 	return (0);
 }
