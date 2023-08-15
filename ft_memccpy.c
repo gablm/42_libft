@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ztest.c                                            :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/14 21:06:45 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 11:48:11 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/08/15 11:26:49 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/08/15 11:49:14 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	main(int argc, char **argv)
+void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	(void)argc;
-	(void)argv;
-	char a[] = "cringe";
-	char b[] = "0000000000";
-	char *c = ft_memccpy(b, a, 'g', 10);
-	ft_putstr(b);
-	ft_putchar(10);
-	ft_putstr(c);
-	
-	ft_putchar(10);
+	size_t				i;
+	const unsigned char	*s;
+
+	i = 0;
+	s = src;
+	while (i < n)
+	{
+		*((char *)dest + i) = *(s + i);
+		if (s[i] == (unsigned char)c)
+			return (dest + i + 1);
+		i++;
+	}
 	return (0);
 }

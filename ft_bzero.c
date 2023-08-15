@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ztest.c                                            :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/14 21:06:45 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 11:48:11 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/08/15 10:58:35 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/08/15 11:01:00 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	main(int argc, char **argv)
+void	ft_bzero(void *s, size_t n)
 {
-	(void)argc;
-	(void)argv;
-	char a[] = "cringe";
-	char b[] = "0000000000";
-	char *c = ft_memccpy(b, a, 'g', 10);
-	ft_putstr(b);
-	ft_putchar(10);
-	ft_putstr(c);
-	
-	ft_putchar(10);
-	return (0);
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+		*((char *)s + i++) = 0;
 }
