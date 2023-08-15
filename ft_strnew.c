@@ -6,7 +6,7 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 15:21:18 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 15:39:45 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/08/15 15:45:57 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ char	*ft_strnew(size_t size)
 	if (!res)
 		return (NULL);
 	ft_bzero(res, size + 1);
-	return (res);	
+	return (res);
 }

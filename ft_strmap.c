@@ -6,7 +6,7 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 15:34:43 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 15:40:33 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/08/15 15:47:25 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	int		i;
 	int		len;
 	char	*res;
-	
+
 	if (!s || !f)
 		return (NULL);
 	len = ft_strlen(s);

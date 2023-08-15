@@ -6,7 +6,7 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 15:29:41 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 15:38:47 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/08/15 15:47:12 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striter(char *s, void (*f)(char *))
 	int	i;
 
 	if (!f || !s)
-		return ;	
+		return ;
 	i = 0;
 	while (s[i])
 	{
