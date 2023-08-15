@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 15:49:56 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 16:48:59 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/08/15 16:01:43 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/08/15 16:23:44 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+static int	ft_iswhitespace(int c)
 {
+	return (c == ' ' || c == '\n' || c == '\t');
+}
+
+char	*ft_strtrim(char const *s)
+{
+	int		start;
+	int		end;
+	int		i;
 	char	*res;
-	size_t	i;
 
 	if (!s)
 		return (NULL);
-	res = (char *)malloc(sizeof(char) * (len + 1));
-	if (!res)
-		return (NULL);
+	start = 0;
+	while (ft_iswhitespace(s[start]))
+		start++;
+	end = ft_strlen(s);
+	while (ft_iswhitespace(s[end]))
+		end--;
+	res = (char *)malloc(sizeof(char) * (end - start + 2));
 	i = 0;
-	while (i < len)
-	{
-		res[i] = s[start + i];
-		i++;
-	}
-	return (res);
+	while (start != end)
+		res[i++] = s[start++];
+	res[i] = 0;
+	return (res); 
 }

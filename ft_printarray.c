@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ztest.c                                            :+:      :+:    :+:   */
+/*   ft_printarray.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/14 21:06:45 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 16:49:27 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/08/15 16:36:19 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/08/15 16:45:04 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int main(int argc, char **argv)
+void	ft_printarray(char **strs)
 {
-	ft_printarray(ft_strsplit(argv[2], argv[1][0]));
-	(void)argv;
-	(void)argc;
-	return (0);
+	int	i;
+
+	i = 0;
+	ft_putstr("[\n");
+	while (strs[i] != 0)
+	{
+		ft_putnbr(i);
+		ft_putstr(": \"");
+		ft_putstr(strs[i++]);
+		ft_putstr("\"\n");
+	}
+	ft_putstr("]\n");
 }

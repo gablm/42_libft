@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ztest.c                                            :+:      :+:    :+:   */
+/*   ft_countwords.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/14 21:06:45 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 16:49:27 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/08/15 16:15:40 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/08/15 16:28:31 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int main(int argc, char **argv)
+int	ft_countwords(char const *str, char delim)
 {
-	ft_printarray(ft_strsplit(argv[2], argv[1][0]));
-	(void)argv;
-	(void)argc;
-	return (0);
+	int	i;
+	int	res;
+
+	if (!str)
+		return (-1);
+	if (ft_strlen(str) == 0)
+		return (0);
+	res = 0;
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == delim && i > 0)
+		{
+			if (str[i - 1] != delim)
+				res++;
+		}
+		i++;
+	}
+	if (str[i] == '\0' && str[i - 1] != delim)
+		res++;
+	return (res);
 }
