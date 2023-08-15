@@ -17,6 +17,8 @@
 # include <stdlib.h>
 # include <string.h>
 
+# define ABS(x) (x * ((x > 0) - (x < 0)))
+
 // Libc
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
