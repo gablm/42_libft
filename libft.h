@@ -90,5 +90,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 // Extra
 void	ft_swap(int *a, int *b);
+int		ft_isspace(int c);
+int		ft_isblank(int c);
 
 #endif
