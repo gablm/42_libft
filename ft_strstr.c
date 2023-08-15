@@ -14,12 +14,12 @@
 
 char	*ft_strstr(const char *big, const char *little)
 {
-	int	i;
-	int	ll;
+	int		i;
+	size_t	ll;
 
 	i = 0;
 	ll = ft_strlen(little);
-	if (strcmp(little, ""))
+	if (ll == 0)
 		return ((char *)big);
 	while (big[i])
 	{
