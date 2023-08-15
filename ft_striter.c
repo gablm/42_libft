@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 15:09:36 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 15:16:55 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/08/15 15:29:41 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/08/15 15:38:47 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memalloc(size_t size)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	void	*res;
+	int	i;
 
-	res = malloc(size);
-	if (res == NULL)
-		return (0);
-	ft_bzero(res, size);
-	return (res);
+	if (!f || !s)
+		return ;	
+	i = 0;
+	while (s[i])
+	{
+		f(s + i);
+		i++;
+	}
 }
