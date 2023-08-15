@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 14:22:11 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 14:22:11 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/08/15 14:25:31 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/08/15 14:25:31 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
+size_t	ft_strlcat(char *dest, char *src, size_t size)
 {
-	unsigned int	i;
+	int		i;
+	int		dsi;
+	int		sri;
 
+	dsi = ft_strlen(dest);
+	sri = ft_strlen(src);
+	if ((int)size > dsi)
+		sri += dsi;
+	else
+		sri += size;
 	i = 0;
-	while (i < n && src[i] != '\0')
+	while (src[i] && (dsi + i < (int)size - 1))
 	{
-		dest[i] = src[i];
+		dest[dsi + i] = src[i];
 		i++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	dest[dsi + i] = '\0';
+	return (sri);
 }
