@@ -10,7 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strstr(const char *big, const char *little)
 {
+	int	i;
+	int	ll;
+
+	i = 0;
+	ll = ft_strlen(little);
+	if (strcmp(little, ""))
+		return ((char *)big);
+	while (big[i])
+	{
+		if (!strncmp(big + i, little, ll))
+			return ((char *)big + i);
+		i++;
+	}
 	return (0);
 }

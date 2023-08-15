@@ -6,7 +6,7 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 14:36:32 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 14:47:35 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/08/15 15:03:33 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == (unsigned char)c)
-			res = s + i;
+			res = (char *)s + i;
 		i++;
 	}
 	if (c == 0)
