@@ -6,14 +6,13 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 14:39:38 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 14:43:14 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/08/15 14:48:58 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	return (0);
- //redo
 }

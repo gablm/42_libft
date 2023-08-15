@@ -6,7 +6,7 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 21:06:45 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 14:15:02 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/08/15 14:50:04 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@ int	main(int argc, char **argv)
 	(void)argv;
 	char a[] = "cringert";
 	char b[] = "cringERT0000";
-	//char *c = ft_memchr(a, 'i', 6);
 	ft_putnbr(memcmp(a, b, 8));
 	ft_putchar(10);
 	ft_putstr(a);
-	
 	ft_putchar(10);
 	return (0);
 }

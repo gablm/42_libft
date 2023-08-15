@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(const char *big, char *little)
+char	*ft_strstr(const char *big, const char *little)
 {
 	return (0);
-} //redo
+}

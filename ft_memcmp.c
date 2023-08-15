@@ -6,7 +6,7 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 14:01:58 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 14:05:50 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/08/15 14:49:36 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	one = s1;
 	two = s2;
-
 	while (i < n)
 	{
 		if (one[i] != two[i])
@@ -29,5 +28,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	}
 	return (0);
-	
 }
