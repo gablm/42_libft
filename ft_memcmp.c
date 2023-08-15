@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ztest.c                                            :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/14 21:06:45 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 14:15:02 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/08/15 14:01:58 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/08/15 14:05:50 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int	main(int argc, char **argv)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	(void)argc;
-	(void)argv;
-	char a[] = "cringert";
-	char b[] = "cringERT0000";
-	//char *c = ft_memchr(a, 'i', 6);
-	ft_putnbr(memcmp(a, b, 8));
-	ft_putchar(10);
-	ft_putstr(a);
-	
-	ft_putchar(10);
+	const unsigned char	*one;
+	const unsigned char	*two;
+	size_t				i;
+
+	i = 0;
+	one = s1;
+	two = s2;
+
+	while (i < n)
+	{
+		if (one[i] != two[i])
+			return (one[i] - two[i]);
+		i++;
+	}
 	return (0);
+	
 }
