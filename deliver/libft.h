@@ -17,8 +17,6 @@
 # include <stdlib.h>
 # include <string.h>
 
-# define ABS(x) (x * ((x > 0) - (x < 0)))
-
 // Libc
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
@@ -54,9 +52,10 @@ char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char const *s, int fd);
-void	ft_putendl_fd(char const *s, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 
 // Bonus 2
 typedef struct s_list
@@ -75,12 +74,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
-// Extra
-void	ft_swap(int *a, int *b);
-int		ft_isspace(int c);
-int		ft_isblank(int c);
-int		ft_countwords(char const *s, char delim);
-void	ft_printarray(char **strs);
 
 #endif
