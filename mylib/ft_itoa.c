@@ -6,17 +6,26 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 16:57:48 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 17:11:53 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/08/17 15:20:52 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_abs(int c)
+{
+	if (c < 0)
+		return (-c);
+	return (c);
+}
 
 static int	ft_ndivs(int n)
 {
 	int	res;
 
 	res = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
 	{
 		res++;
@@ -40,14 +49,23 @@ char	*ft_itoa(int n)
 	if (!res)
 		return (NULL);
 	res[i--] = 0;
+	if (n == 0)
+		res[i] = '0';
 	if (n < 0)
 	{
 		res[0] = '-';
 	}
 	while (n != 0)
 	{
-		res[i--] = '0' + ABS(n % 10);
+		res[i--] = '0' + ft_abs(n % 10);
 		n /= 10;
 	}
 	return (res);
 }
+
+/*#include <stdio.h>
+int main(int argc, char **argv)
+{
+	printf("%s", ft_itoa(atoi(argv[1])));
+	return 0;
+}*/

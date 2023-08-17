@@ -6,7 +6,7 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 20:01:53 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 20:32:31 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/08/17 15:15:39 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	total;
 
 	total = size * nmemb;
+	if (nmemb != 0 && total / nmemb != size)
+		return (NULL);
 	res = malloc(total);
 	if (!res)
 		return (NULL);
