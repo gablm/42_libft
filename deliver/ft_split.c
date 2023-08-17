@@ -6,7 +6,7 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/15 16:11:16 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/17 15:28:03 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/08/17 15:43:10 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,6 @@ char	**ft_split(char const *s, char c)
 	int		h;
 	int		v;
 
-	if (!s)
-		return (NULL);
 	res = (char **)malloc(sizeof(char *) * (ft_countwords(s, c) + 1));
 	if (!res)
 		return (NULL);
