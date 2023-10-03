@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 16:11:16 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/17 15:43:10 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/10/02 12:31:45 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/10/03 12:33:33 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	**ft_split(char const *s, char c)
 	int		v;
 
 	res = (char **)malloc(sizeof(char *) * (ft_countwords(s, c) + 1));
-	if (!res)
+	if (!res || !s)
 		return (NULL);
 	i = -1;
 	h = 0;
@@ -63,12 +63,3 @@ char	**ft_split(char const *s, char c)
 	res[h] = 0;
 	return (res);
 }
-
-/*#include <stdio.h>
-int main(int argc, char **argv){
-	(void)argc;
-	printf("%d\n", ft_countwords(argv[1], argv[2][0]));
-	char **tab = ft_split(argv[1], argv[2][0]);
-	printf("%s", tab[0]);
-	return 0;
-}*/

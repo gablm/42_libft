@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 16:01:43 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/17 15:09:37 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/10/02 12:30:29 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/10/03 12:35:13 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	ft_inset(char c, char const *set)
 	return (0);
 }
 
-char	*ft_strtrim(char const *s, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		start;
 	int		end;
@@ -34,26 +34,21 @@ char	*ft_strtrim(char const *s, char const *set)
 	size_t	total;
 	char	*res;
 
-	if (!s)
+	if (!s1)
 		return (NULL);
 	start = 0;
-	while (ft_inset(s[start], set))
+	while (ft_inset(s1[start], set))
 		start++;
-	end = ft_strlen(s) - 1;
-	while (start < end && ft_inset(s[end], set))
+	end = ft_strlen(s1) - 1;
+	while (start < end && ft_inset(s1[end], set))
 		end--;
 	total = end - start + 2;
 	res = (char *)malloc(sizeof(char) * (total));
+	if (!res)
+		return (NULL);
 	i = 0;
 	while (i < total - 1)
-		res[i++] = s[start++];
+		res[i++] = s1[start++];
 	res[i] = 0;
 	return (res); 
 }
-
-/*#include <stdio.h>
-int main(int argc, char **argv){
-	(void)argc;
-	printf("%s\n", ft_strtrim(argv[1], argv[2]));
-	return 0;
-}*/

@@ -5,14 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 14:39:38 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/17 14:43:20 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/10/02 12:30:47 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/10/03 12:35:34 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-//#define ft_strlen(x) strlen(x)
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
@@ -33,12 +31,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-
-/*#include <stdio.h>
-#include <bsd/string.h>
-int main(int argc, char **argv)
-{
-	printf("%s\n", ft_strnstr(argv[1], argv[2], atoi(argv[3])));
-	printf("%s\n", strnstr(argv[1], argv[2], atoi(argv[3])));
-	return 0;
-}*/

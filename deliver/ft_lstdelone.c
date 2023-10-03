@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/17 16:44:50 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/17 16:47:11 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/10/02 12:34:08 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/10/03 12:25:59 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (!lst || !del)
+		return ;
+	if (!lst->content)
+		return ;
 	del(lst->content);
 	free(lst);
 }

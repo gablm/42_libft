@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 16:57:48 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/17 15:20:52 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/10/02 12:28:32 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/10/03 12:23:09 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,3 @@ char	*ft_itoa(int n)
 	}
 	return (res);
 }
-
-/*#include <stdio.h>
-int main(int argc, char **argv)
-{
-	printf("%s", ft_itoa(atoi(argv[1])));
-	return 0;
-}*/

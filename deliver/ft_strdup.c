@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/25 18:52:31 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 00:07:49 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/10/02 12:31:28 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/10/02 13:15:39 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strdup(const char *s)
 	while (s[len])
 		len++;
 	new = (char *)malloc(sizeof(char) * (len + 1));
+	if (!new)
+		return (NULL);
 	len = 0;
 	while (s[len])
 	{

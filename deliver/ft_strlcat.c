@@ -5,22 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 14:25:31 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/15 14:25:31 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/10/02 12:31:12 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/10/02 12:31:12 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	dsi;
 	size_t	sri;
 
-	if (!dest || !src)
+	if (size == 0)
 		return (0);
-	dsi = ft_strlen(dest);
+	dsi = ft_strlen(dst);
 	sri = ft_strlen(src);
 	if (size > dsi)
 		sri += dsi;
@@ -31,9 +31,9 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		return (sri);
 	while (src[i] && dsi + i < size - 1)
 	{
-		dest[dsi + i] = src[i];
+		dst[dsi + i] = src[i];
 		i++;
 	}
-	dest[dsi + i] = '\0';
+	dst[dsi + i] = '\0';
 	return (sri);
 }

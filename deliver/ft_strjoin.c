@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/15 15:54:26 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/17 15:31:51 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/10/02 12:31:18 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/10/03 12:35:20 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	res[i] = 0;
 	return (res);
 }
-
-/*#include <stdio.h>
-int main(int argc, char **argv)
-{
-	printf("%s", ft_strjoin(argv[1], argv[2]));
-	return 0;
-}*/

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/17 16:08:28 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/08/17 16:23:59 by gfragoso         ###   ########.fr       */
+/*   Created: 2023/10/02 12:33:48 by gfragoso          #+#    #+#             */
+/*   Updated: 2023/10/03 12:21:15 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*ft_lstnew(void *content)
 	t_list	*res;
 
 	res = (t_list *)malloc(sizeof(t_list));
+	if (!res)
+		return (NULL);
 	res->next = NULL;
 	res->content = content;
 	return (res);
