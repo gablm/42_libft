@@ -6,7 +6,7 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 12:30:47 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/10/03 12:35:34 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/10/03 12:59:14 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	ll = ft_strlen(little);
 	while (big[i] && ll <= len - i)
 	{
-		if (!strncmp(big + i, little, ll))
+		if (!ft_strncmp(big + i, little, ll))
 			return ((char *)big + i);
 		i++;
 	}

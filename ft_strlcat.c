@@ -18,22 +18,18 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dsi;
 	size_t	sri;
 
-	if (size == 0)
-		return (0);
-	dsi = ft_strlen(dst);
 	sri = ft_strlen(src);
-	if (size > dsi)
-		sri += dsi;
-	else
-		sri += size;
-	i = 0;
 	if (size == 0)
 		return (sri);
+	dsi = ft_strlen(dst);
+	if (size <= dsi)
+		return (sri + size);
+	i = 0;
 	while (src[i] && dsi + i < size - 1)
 	{
 		dst[dsi + i] = src[i];
 		i++;
 	}
 	dst[dsi + i] = '\0';
-	return (sri);
+	return (sri + dsi);
 }
