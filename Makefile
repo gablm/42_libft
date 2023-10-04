@@ -6,7 +6,7 @@
 #    By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/02 12:30:00 by gfragoso          #+#    #+#              #
-#    Updated: 2023/10/03 13:25:07 by gfragoso         ###   ########.fr        #
+#    Updated: 2023/10/04 14:23:35 by gfragoso         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,5 +44,3 @@ re: fclean all
 
 bonus: $(OBJS) $(BNS_OBJS)
 	ar rc $(NAME) $(OBJS) $(BNS_OBJS)
-
-.PHONY: clean re fclean all bonus

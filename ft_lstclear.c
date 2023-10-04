@@ -6,7 +6,7 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 12:34:15 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/10/03 12:32:41 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/10/04 15:00:31 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*current;
 
-	if (!lst || !del)
+	if (!lst || !del || !(*lst))
 		return ;
 	if (!((*lst)->content))
 		return ;

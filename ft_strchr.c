@@ -6,7 +6,7 @@
 /*   By: gfragoso <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/02 12:31:38 by gfragoso          #+#    #+#             */
-/*   Updated: 2023/10/02 12:31:40 by gfragoso         ###   ########.fr       */
+/*   Updated: 2023/10/04 15:05:52 by gfragoso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s + i);
 		i++;
 	}
-	if (c == 0)
+	if ((unsigned char)c == '\0')
 		return ((char *)s + i);
 	return (0);
 }
